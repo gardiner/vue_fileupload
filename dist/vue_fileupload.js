@@ -2,7 +2,7 @@ define(['jquery'], function($) {
     "use strict";
 
     return {
-        template: "<div class='fileupload' v-bind:class='status'><div class='progressbar' v-bind:style='{width: progressbar_width}'></div></div>",
+        template: "<div class='fileupload' v-bind:class='status'><div class='progressbar' v-bind:style='{width: progressbar_width}'></div><div class='content dz-message'><slot></slot></div></div>",
         props: ['fileTypes', 'url', 'params'],
         data: function() {
             return {

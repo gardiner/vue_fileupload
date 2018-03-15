@@ -2,7 +2,7 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 @import "../bower_components/font-awesome/scss/font-awesome";
 @import "vue_fileupload";
 
-[vcloak] {
+[v-cloak] {
     display: none;
 }
 
@@ -32,5 +32,10 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
     .progressbar {
         min-height: 50px;
         background: lightgray;
+    }
+
+    .content {
+        padding: 1em;
+        text-align: center;
     }
 }
