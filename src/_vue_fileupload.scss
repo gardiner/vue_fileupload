@@ -1,0 +1,13 @@
+.fileupload {
+    position: relative;
+
+    //hide dropzone information
+    .dz-preview {
+        display: none;
+    }
+
+    //progressbar
+    .progressbar {
+        width: 0;
+    }
+}

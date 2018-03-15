@@ -1,0 +1,36 @@
+$fa-font-path: "../bower_components/font-awesome/fonts";
+@import "../bower_components/font-awesome/scss/font-awesome";
+@import "vue_fileupload";
+
+[vcloak] {
+    display: none;
+}
+
+.fileupload {
+    margin: 1em;
+    min-height: 50px;
+    border: 5px dashed lightgray;
+    border-radius: 10px;
+    transition: border-color 0.5s;
+
+    &.hover {
+        border-color: blue;
+    }
+
+    &.sending {
+        border-color: blue;
+    }
+
+    &.success {
+        border-color: green;
+    }
+
+    &.error {
+        border-color: red;
+    }
+
+    .progressbar {
+        min-height: 50px;
+        background: lightgray;
+    }
+}
