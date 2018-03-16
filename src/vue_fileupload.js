@@ -1,4 +1,4 @@
-define(['jquery'], function($) {
+define(['jquery', 'dropzone'], function($) {
     "use strict";
 
     return {
@@ -38,7 +38,6 @@ define(['jquery'], function($) {
                     });
                 }
             });
-            console.log(self.dropzone);
         },
         watch: {
             params: function() {
