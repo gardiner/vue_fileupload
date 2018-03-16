@@ -21,7 +21,18 @@
                         fileupload: vue_fileupload
                     },
                     data: {
+                        status: 'Waiting for upload',
                         value: 'value'
+                    },
+                    methods: {
+                        success: function(response) {
+                            this.status = 'Success :)';
+                            console.log('Response: ', response);
+                        },
+                        error: function(reason) {
+                            this.status = 'Error :(';
+                            console.log('Error: ', reason);
+                        }
                     }
                 }).$mount("#demo");
             });
@@ -29,5 +40,7 @@
     %body
         #demo(v-cloak)
             %h2 Fileupload
-            %fileupload(url="/upload.php" v-bind:params="{value: value}")
+            %fileupload(url="/upload.php" v-bind:params="{value: value}" v-on:success="success" v-on:error="error")
                 Please drag files here to upload them.
+            %div
+                {{status}}

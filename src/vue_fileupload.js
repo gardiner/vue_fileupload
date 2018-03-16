@@ -27,14 +27,17 @@ define(['jquery', 'dropzone'], function($) {
                             self.progress = progress / 100.0;
                         }
                         self.status = 'sending';
+                        self.$emit('progress', self.progress);
                     })
-                    .on('success', function() {
+                    .on('success', function(files, response) {
                         self.progress = 0;
                         self.status = 'success';
+                        self.$emit('success', response);
                     })
-                    .on('error', function() {
+                    .on('error', function(files, reason) {
                         self.progress = 0;
                         self.status = 'error';
+                        self.$emit('error', reason);
                     });
                 }
             });
