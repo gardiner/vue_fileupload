@@ -1,4 +1,4 @@
-define(['jquery', 'dropzone'], function($) {
+define(['jquery', 'dropzone'], function($, Dropzone) {
     "use strict";
 
     return {
