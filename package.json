@@ -1,0 +1,25 @@
+{
+  "name": "vue_fileupload",
+  "version": "0.0.4",
+  "description": "vue.js component for file upload",
+  "keywords": [
+    "vue.js",
+    "selectbox"
+  ],
+  "main": "dist/vue_fileupload.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gardiner/vue_fileupload.git"
+  },
+  "author": "Ole Trenner <ole.trenner@3dbits.de>",
+  "bugs": {
+    "url": "https://github.com/gardiner/vue_fileupload/issues"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "dropzone": "^5.1.1"
+  },
+  "homepage": "https://github.com/gardiner/vue_fileupload#readme"
+}
