@@ -3,9 +3,10 @@ define(['jquery', 'dropzone'], function($, Dropzone) {
 
     return {
         template: "<div class='fileupload' v-bind:class='status'><div class='progressbar' v-bind:style='{width: progressbar_width}'></div><div class='content dz-message'><slot></slot></div></div>",
-        props: ['fileTypes', 'url', 'params'],
+        props: ['fileTypes', 'url', 'params', 'options'],
         data: function() {
             return {
+                dropzone: null,
                 progress: 0,
                 status: 'ready'
             };
@@ -14,7 +15,7 @@ define(['jquery', 'dropzone'], function($, Dropzone) {
             var self = this;
 
             self.dropzone = new Dropzone(self.$el, {
-                url: function() { return self.url; },
+                url: self.url,
                 params: self.params,
                 acceptedFiles: self.fileTypes,
                 init: function() {
@@ -43,6 +44,14 @@ define(['jquery', 'dropzone'], function($, Dropzone) {
             });
         },
         watch: {
+            options: function() {
+                if (this.options) {
+                    $.extend(this.dropzone.options, this.options);
+                }
+            },
+            url: function() {
+                this.dropzone.options.url = this.url;
+            },
             params: function() {
                 this.dropzone.options.params = this.params;
             }
