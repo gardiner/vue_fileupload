@@ -14,7 +14,7 @@ define(['jquery', 'dropzone'], function($, Dropzone) {
         mounted: function() {
             var self = this;
 
-            self.dropzone = new Dropzone(self.$el, {
+            self.dropzone = new Dropzone(self.$el, $.extend({
                 url: self.url,
                 params: self.params,
                 acceptedFiles: self.fileTypes,
@@ -41,7 +41,7 @@ define(['jquery', 'dropzone'], function($, Dropzone) {
                         self.$emit('error', reason);
                     });
                 }
-            });
+            }, self.options));
         },
         watch: {
             options: function() {
