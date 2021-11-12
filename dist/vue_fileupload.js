@@ -23,6 +23,9 @@ define(['jquery', 'dropzone'], function($, Dropzone) {
                     .on('dragover', function() {
                         self.status = 'hover';
                     })
+                    .on('dragleave mouseleave', function() {
+                        self.status = 'ready';
+                    })
                     .on('uploadprogress', function(evt, progress) {
                         if (progress) {
                             self.progress = progress / 100.0;
