@@ -3,12 +3,12 @@
   "authors": [
     "Ole Trenner <ole.trenner@3dbits.de>"
   ],
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "vue.js component for file upload",
   "private": true,
   "dependencies": {
     "jquery": "^3.2.1",
-    "dropzone": "^5.1.1"
+    "dropzone": "~5.5.1"
   },
   "ignore": [
     "**/.*",
