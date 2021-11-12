@@ -23,7 +23,7 @@ define(['jquery', 'dropzone'], function($, Dropzone) {
                     .on('dragover', function() {
                         self.status = 'hover';
                     })
-                    .on('dragleave mouseleave', function() {
+                    .on('dragleave', function() {
                         self.status = 'ready';
                     })
                     .on('uploadprogress', function(evt, progress) {
